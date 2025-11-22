@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>تفاصيل المشروع — PALMA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-white text-gray-900 font-sans">
+  <header class="fixed w-full bg-white/60 backdrop-blur z-40">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-yellow-200 to-yellow-400 flex items-center justify-center text-white font-bold">ع</div>
+        <span class="hidden sm:inline font-semibold">PALMA</span>
+      </a>
+      <nav class="hidden md:flex gap-6 items-center">
+        <a href="index.html" class="hover:text-gray-700">الرئيسية</a>
+        <a href="projects.html" class="hover:text-gray-700">المشاريع</a>
+        <a href="about.html" class="hover:text-gray-700">من نحن</a>
+        <a href="contact.html" class="btn-cta">تواصل معنا</a>
+      </nav>
+      <div class="md:hidden">
+        <button id="nav-toggle-3" class="p-2">☰</button>
+      </div>
+    </div>
+    <div id="mobile-menu-3" class="hidden md:hidden px-6 pb-4">
+      <a href="projects.html" class="block py-2">المشاريع</a>
+      <a href="about.html" class="block py-2">من نحن</a>
+      <a href="contact.html" class="block py-2">تواصل</a>
+    </div>
+  </header>
+
+  <main class="pt-24 max-w-6xl mx-auto px-6">
+    <a href="projects.html" class="inline-block mb-6">← رجوع للمشاريع</a>
+    <h1 class="text-3xl font-bold">مشروع جولد فيو</h1>
+    <p class="mt-2 text-gray-600">وصف مختصر للمشروع ومميزاته.</p>
+
+    <!-- Gallery -->
+    <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+      <img src="assets/img/project-1.jpeg" class="w-full h-64 object-cover rounded-lg" alt="" loading="lazy">
+      <img src="assets/img/project-2.jpeg" class="w-full h-64 object-cover rounded-lg" alt="" loading="lazy">
+      <img src="assets/img/project-3.jpeg" class="w-full h-64 object-cover rounded-lg" alt="" loading="lazy">
+    </div>
+
+    <!-- Description & Map -->
+    <div class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="md:col-span-2">
+        <h3 class="font-semibold">وصف المشروع</h3>
+        <p class="mt-3 text-gray-700">تفاصيل مطولة عن المشروع، المساحة، المرافق، موعد التسليم، خطط الدفع.</p>
+        <ul class="mt-4 list-disc list-inside text-gray-600">
+          <li>الموقع: شارع المثال، المدينة</li>
+          <li>التسليم: 2026</li>
+          <li>المساحات: شقق 70–180 م²، فلل 250–400 م²</li>
+        </ul>
+      </div>
+      <aside>
+        <h4 class="font-semibold">الموقع</h4>
+        <div class="mt-3 w-full h-48 bg-gray-100 rounded overflow-hidden">
+          <!-- ضع iframe خرائط جوجل هنا عند الحاجة -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </aside>
+    </div>
+
+  </main>
+
+  <footer class="bg-white border-t py-8 mt-12">
+    <div class="max-w-7xl mx-auto px-6 text-right text-sm text-gray-600">© 2025 شركة العقارات الفاخرة. جميع الحقوق محفوظة.</div>
+  </footer>
+
+  <script>
+    document.getElementById('nav-toggle-3')?.addEventListener('click', ()=>{
+      const m = document.getElementById('mobile-menu-3'); if(!m) return; m.classList.toggle('hidden');
+    });
+  </script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

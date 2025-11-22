@@ -1,0 +1,27 @@
+:root{
+  --gold: #BFA36A;
+  --darkgold: #9A7B3A;
+  --white: #ffffff;
+  --lightgray: #F5F5F5;
+  --darktext: #222222;
+}
+
+html,body{font-family: 'Cairo', sans-serif; background:var(--white); color:var(--darktext);}
+
+/* Buttons */
+.btn-cta{padding:0.6rem 1rem;border-radius:9999px;background:var(--gold);color:#fff;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,0.08);}
+
+/* Project hover */
+.project-card img{transition:transform .5s ease, filter .4s ease;}
+.project-card:hover img{transform:scale(1.03);filter:brightness(0.98);}
+
+/* Reveal animations */
+.reveal{opacity:0;transform:translateY(20px);transition:all .8s cubic-bezier(.2,.9,.3,1);}
+.reveal.active{opacity:1;transform:none;}
+
+/* Mobile menu */
+#mobile-menu a{border-top:1px solid #eee;display:block;padding:0.6rem 0}
+
+/* Small utilities */
+img{display:block;max-width:100%;}
+a{transition:color .2s ease;}
