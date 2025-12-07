@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>PALMA — الصفحة الرئيسية</title>
+
+  <!-- Google Font + Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header id="nav" class="fixed top-0 w-full bg-transparent">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <!-- LOGO -->
+      <a href="#hero">
+        <img src="assets/img/paalma.png" class="h-16 object-cover" alt="PALMA Logo">
+      </a>
+
+      <!-- DESKTOP MENU -->
+      <nav class="hidden md:flex gap-6 text-lg font-semibold">
+        <a href="#hero"    data-lang="nav_home"     class="hover:text-[var(--gold)]"></a>
+        <a href="#projects" data-lang="nav_projects" class="hover:text-[var(--gold)]"></a>
+        <a href="#about"   data-lang="nav_about"    class="hover:text-[var(--gold)]"></a>
+        <a href="#contact" data-lang="nav_contact"  class="hover:text-[var(--gold)]"></a>
+      </nav>
+
+      <!-- LANGUAGE SWITCH -->
+      <div class="relative hidden md:block">
+        <button id="lang-toggle" class="lang-switch"></button>
+
+        <div id="lang-menu" class="lang-menu hidden">
+          <button onclick="applyLanguage('ar')" class="lang-option">🇩🇿 العربية</button>
+          <button onclick="applyLanguage('fr')" class="lang-option">🇫🇷 Français</button>
+        </div>
+      </div>
+
+      <!-- Mobile Button -->
+      <button id="nav-toggle" class="md:hidden text-3xl">☰</button>
+    </div>
+
+    <!-- ================= MOBILE MENU ================= -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-4 text-lg">
+        <a href="#hero"    data-lang="nav_home"     class="block py-2"></a>
+        <a href="#projects" data-lang="nav_projects" class="block py-2"></a>
+        <a href="#about"   data-lang="nav_about"    class="block py-2"></a>
+        <a href="#contact" data-lang="nav_contact"  class="block py-2"></a>
+
+        <div class="mt-4 border-t pt-3">
+            <button onclick="applyLanguage('ar')" class="px-3 py-1 border rounded">AR</button>
+            <button onclick="applyLanguage('fr')" class="px-3 py-1 border rounded">FR</button>
+        </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SLIDER ==================== -->
+  <section id="hero" class="slider">
+    <div class="slide active" style="background-image:url('assets/img/slider/1.png')"></div>
+    <div class="slide" style="background-image:url('assets/img/slider/2.png')"></div>
+    <div class="slide" style="background-image:url('assets/img/slider/3.png')"></div>
+    <div class="slide" style="background-image:url('assets/img/slider/4.png')"></div>
+    <div class="slide" style="background-image:url('assets/img/slider/5.png')"></div>
+    <div class="hero-overlay"></div>
+
+    <!-- HERO TEXT -->
+    <div class="hero-text-holder">
+      <div class="textbox">
+        <h1 data-lang="hero_title" class="text-4xl font-bold mb-4 text-white"></h1>
+        <p  data-lang="hero_desc"  class="text-white/90 mb-6"></p>
+
+        <div class="flex gap-4">
+          <a href="#projects" data-lang="btn_projects" class="px-6 py-3 bg-white text-black rounded-full font-semibold"></a>
+          <a href="#contact" data-lang="btn_contact" class="px-6 py-3 border border-white text-white rounded-full"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROJECTS ==================== -->
+  <section id="projects" class="max-w-7xl mx-auto px-6 py-16">
+    <h2 data-lang="projects_title" class="text-3xl font-bold mb-8 text-[var(--gold)]"></h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <a href="project-gold-view.html" class="reveal block bg-white shadow rounded-lg overflow-hidden hover:shadow-xl transition">
+        <img src="assets/img/plan/p_003.jpg" class="h-48 w-full object-cover">
+        <div class="p-4"><h3 class="font-semibold">Gold View</h3></div>
+      </a>
+
+      <a href="project-nokhba-towers.html" class="reveal block bg-white shadow rounded-lg overflow-hidden hover:shadow-xl transition">
+        <img src="assets/img/plan/p_004.jpg" class="h-48 w-full object-cover">
+        <div class="p-4"><h3 class="font-semibold">Nokhba Towers</h3></div>
+      </a>
+
+      <a href="project-bassateen-villas.html" class="reveal block bg-white shadow rounded-lg overflow-hidden hover:shadow-xl transition">
+        <img src="assets/img/plan/p_013.jpg" class="h-48 w-full object-cover">
+        <div class="p-4"><h3 class="font-semibold">Bassateen Villas</h3></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+   
+  <section id="about" class="bg-gray-50 py-16">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+
+    <div class="reveal">
+
+      <h2 data-lang="about_intro_title" class="text-3xl font-bold text-[var(--gold)]"></h2>
+      <p data-lang="about_intro_text" class="text-gray-700 leading-relaxed"></p>
+
+      <h3 data-lang="about_history_title" class="text-2xl font-semibold text-[var(--gold)]"></h3>
+      <p data-lang="about_history_text" class="text-gray-700 leading-relaxed"></p>
+
+      <h3 data-lang="about_vision_title" class="text-2xl font-semibold text-[var(--gold)]"></h3>
+      <p data-lang="about_vision_text" class="text-gray-700 leading-relaxed"></p>
+
+      <h3 data-lang="about_team_title" class="text-2xl font-semibold text-[var(--gold)]"></h3>
+      <p data-lang="about_team_text" class="text-gray-700 leading-relaxed"></p>
+
+    </div>
+
+    <div class="reveal">
+      <img src="assets/img/slider/slider_2.jpeg" class="rounded-lg shadow-lg h-72 w-full object-cover">
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- ==================== CONTACT ==================== -->
+  <section id="contact" class="max-w-5xl mx-auto px-6 py-16">
+    <h2 data-lang="contact_title" class="text-3xl font-bold text-[var(--gold)] mb-8"></h2>
+
+    <form class="grid gap-4 bg-white p-6 shadow rounded-lg">
+      <input   class="p-3 border rounded" data-lang="contact_name"    placeholder="الاسم">
+      <input   class="p-3 border rounded" data-lang="contact_email"   placeholder="البريد الإلكتروني">
+      <input   class="p-3 border rounded" data-lang="contact_phone"   placeholder="رقم الهاتف">
+      <textarea class="p-3 border rounded" rows="5" data-lang="contact_message" placeholder="رسالتك"></textarea>
+      <button   data-lang="contact_submit" class="px-6 py-3 bg-[var(--gold)] text-white font-semibold rounded-full"></button>
+    </form>
+
+    <div class="mt-8 h-64">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.113339801068!2d-0.576083!3d35.723431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7e630079936e53%3A0xe2019f20cc5c42e7!2sPalma%20immobilier!5e0!3m2!1sar!2sdz!4v1764423457553!5m2!1sar!2sdz"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="py-6 text-center text-sm text-gray-600 border-t">
+    © 2025 PALMA. جميع الحقوق محفوظة.
+  </footer>
+
+  <!-- JS FILES (يجب ترتيبها هكذا) -->
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/lang.js"></script>
+
+</body>
+</html>

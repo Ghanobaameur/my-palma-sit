@@ -1,0 +1,52 @@
+{
+  "nav_home": "Accueil",
+  "nav_projects": "Projets",
+  "nav_about": "À propos",
+  "nav_contact": "Contact",
+
+  "hero_title": "Nous construisons l’avenir du logement de luxe",
+  "hero_desc": "Des projets haut de gamme dans des emplacements privilégiés — qualité, élégance et valeur d’investissement.",
+
+  "btn_projects": "Voir les projets",
+  "btn_contact": "Nous contacter",
+
+  "projects_title": "Projets",
+
+  "about_title": "À propos de nous",
+  "about_intro_title": "Présentation de l’agence",
+  "about_intro_text": "Palma Immobilier est une agence immobilière reconnue pour la qualité et le professionnalisme de ses services, offrant des solutions complètes et adaptées aux besoins de ses clients.",
+
+  "about_history_title": "Historique",
+  "about_history_text": "Fondée il y a plusieurs années, l’agence a su s’imposer grâce à son expertise et à la diversité de ses prestations, notamment à Alger et Oran, gagnant ainsi la confiance d’un large éventail de clients.",
+
+  "about_vision_title": "Vision de l’agence",
+  "about_vision_text": "L’agence vise à atteindre une satisfaction totale de ses clients en leur offrant des consultations professionnelles et des services immobiliers de haute qualité.",
+
+  "about_team_title": "Équipe de travail",
+  "about_team_text": "L’équipe de Palma Immobilier est composée d’experts possédant une vaste expérience des marchés immobiliers locaux et internationaux, ce qui constitue un atout majeur pour accompagner chaque client.",
+
+  "contact_title": "Contactez-nous",
+  "contact_submit": "Envoyer",
+  "contact_name": "Nom",
+  "contact_email": "Email",
+  "contact_phone": "Téléphone",
+  "contact_message": "Votre message",
+  
+  "project_gold_title": "PALMA Résidence",
+  "project_gold_short_desc": "Complexe de luxe avec des installations modernes, un design contemporain et des espaces variés pour tous les besoins.",
+  "project_gold_desc_title": "Description du projet",
+  "project_gold_desc_text": "Détails complets du projet : emplacement, équipements, plans de paiement, délais et livraison.",
+  "project_gold_location_title": "Emplacement",
+  "project_back_to_projects": "← Retour aux projets",
+    
+  
+  "project_title": "PALMA Résidence",
+  "project_desc": "Un complexe luxueux avec des installations modernes, un design contemporain et des espaces variés pour tous les besoins.",
+  
+  "project_details_title": "Description du projet",
+  "project_details_text": "Détails complets sur le projet : emplacement, installations, plans de paiement, délais et livraison.",
+  "project_location": "Emplacement : Bir El Djir – Oran, sur le Boulevard Bou Chikhie",
+  "project_delivery": "Livraison : 2026",
+  "project_area": "Surface : appartements 70–180 m², villas 250–400 m²",
+  "project_map_title": "Emplacement"
+}

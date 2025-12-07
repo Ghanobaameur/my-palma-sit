@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>مشروع جولد فيو — PALMA</title>
+
+  <!-- Google Font + Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    body.project-page #nav nav a,
+    body.project-page #nav #nav-toggle {
+      color: black !important;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 project-page">
+
+  <!-- HEADER -->
+  <header id="nav" class="fixed top-0 w-full bg-transparent">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <!-- LOGO -->
+      <a href="PalmaOnepage.html#hero">
+        <img src="assets/img/paalma.png" class="h-16 object-cover" alt="PALMA Logo">
+      </a>
+
+      <!-- DESKTOP MENU -->
+      <nav class="hidden md:flex gap-6 text-lg font-semibold">
+        <a href="PalmaOnepage.html#hero" data-lang="nav_home" class="hover:text-[var(--gold)]"></a>
+        <a href="PalmaOnepage.html#projects" data-lang="nav_projects" class="hover:text-[var(--gold)]"></a>
+        <a href="PalmaOnepage.html#about" data-lang="nav_about" class="hover:text-[var(--gold)]"></a>
+        <a href="PalmaOnepage.html#contact" data-lang="nav_contact" class="hover:text-[var(--gold)]"></a>
+      </nav>
+
+      <!-- LANGUAGE SWITCH -->
+      <div class="relative hidden md:block">
+        <button id="lang-toggle" class="lang-switch"></button>
+
+
+        <div id="lang-menu" class="lang-menu hidden">
+            <button onclick="applyLanguage('ar')" class="lang-option">🇩🇿 العربية</button>
+            <button onclick="applyLanguage('fr')" class="lang-option">🇫🇷 Français</button>
+        </div>
+      </div>
+
+      <!-- Mobile Button -->
+      <button id="nav-toggle" class="md:hidden text-3xl">☰</button>
+    </div>
+
+    <!-- ================= MOBILE MENU ================= -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-4 text-lg">
+        <a href="PalmaOnepage.html#hero" data-lang="nav_home" class="block py-2"></a>
+        <a href="PalmaOnepage.html#projects" data-lang="nav_projects" class="block py-2"></a>
+        <a href="PalmaOnepage.html#about" data-lang="nav_about" class="block py-2"></a>
+        <a href="PalmaOnepage.html#contact" data-lang="nav_contact" class="block py-2"></a>
+
+        <div class="mt-4 border-t pt-3">
+            <button onclick="applyLanguage('ar')" class="px-3 py-1 border rounded">AR</button>
+            <button onclick="applyLanguage('fr')" class="px-3 py-1 border rounded">FR</button>
+        </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="pt-28 max-w-6xl mx-auto px-6">
+
+    <!-- Breadcrumb -->
+    <div class="mb-6 text-gray-600">
+      <a href="PalmaOnepage.html#projects" class="hover:underline">← <span data-lang="btn_projects">مشاهدة المشاريع</span></a>
+    </div>
+
+    <!-- Title & Short Description -->
+    <h1 data-lang="project_title" class="text-3xl font-bold mb-2">PALMA Résidence</h1>
+    <p data-lang="project_desc" class="text-gray-600 mb-6">مجمع فاخر بمرافق عصرية، تصميم عصري ومساحات متنوعة تناسب جميع الاحتياجات.</p>
+
+    <!-- Gallery -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+      <img src="assets/img/plan/p_003.jpg" class="w-full h-64 object-cover rounded-lg" alt="" loading="lazy">
+      <img src="assets/img/plan/p_004.jpg" class="w-full h-64 object-cover rounded-lg" alt="" loading="lazy">
+      <img src="assets/img/plan/p_013.jpg" class="w-full h-64 object-cover rounded-lg" alt="" loading="lazy">
+      <img src="assets/img/salon/s1.jpeg" class="w-full h-64 object-cover rounded-lg" alt="" loading="lazy">
+      <img src="assets/img/salon/s2.jpeg" class="w-full h-64 object-cover rounded-lg" alt="" loading="lazy">
+      <img src="assets/img/salon/s3.jpeg" class="w-full h-64 object-cover rounded-lg" alt="" loading="lazy">
+      <img src="assets/img/chambre/ch1.jpeg" class="w-full h-64 object-cover rounded-lg" alt="" loading="lazy">
+      <img src="assets/img/chambre/ch2.jpeg" class="w-full h-64 object-cover rounded-lg" alt="" loading="lazy">
+      <img src="assets/img/chambre/ch3.jpeg" class="w-full h-64 object-cover rounded-lg" alt="" loading="lazy">
+      <img src="assets/img/cuisine/c1.jpeg" class="w-full h-64 object-cover rounded-lg" alt="" loading="lazy">
+      <img src="assets/img/cuisine/c2.jpeg" class="w-full h-64 object-cover rounded-lg" alt="" loading="lazy">
+      <img src="assets/img/cuisine/c3.jpeg" class="w-full h-64 object-cover rounded-lg" alt="" loading="lazy">
+    </div>
+
+    <!-- Description & Sidebar -->
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="md:col-span-2">
+        <h3 class="font-semibold text-lg mb-2" data-lang="project_details_title">وصف المشروع</h3>
+        <p data-lang="project_details_text" class="text-gray-700 mb-4">تفاصيل مطولة عن المشروع: الموقع، المرافق، خطط الدفع، المواعيد والتسليم.</p>
+        <ul class="list-disc list-inside text-gray-600">
+          <li data-lang="project_location">الموقع: Bir El Djir – Oran, sur le Boulevard Bou Chikhie</li>
+          <li data-lang="project_delivery">التسليم: 2026</li>
+          <li data-lang="project_area">المساحات: شقق 70–180 م²، فلل 250–400 م²</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <img src="assets/img/New folder (2)/Prix de bien immoubilier.png" class="rounded-lg shadow-lg h-70 w-100 object-cover">
+      </div>
+      
+    </div>
+<aside>
+        <h4 class="font-semibold mb-2" data-lang="project_map_title">الموقع</h4>
+        <div class="w-full h-48 rounded-lg overflow-hidden shadow">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.113339801068!2d-0.576083!3d35.723431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7e630079936e53%3A0xe2019f20cc5c42e7!2sPalma%20immobilier!5e0!3m2!1sar!2sdz!4v1764423457553!5m2!1sar!2sdz" width="80%" height="100%" style="border: 15px;;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </aside>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t py-8 mt-12 text-center text-sm text-gray-600">
+    © 2025 PALMA. جميع الحقوق محفوظة.
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/lang.js"></script>
+
+</body>
+</html>

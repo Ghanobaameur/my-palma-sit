@@ -1,0 +1,57 @@
+{
+  "nav_home": "الرئيسية",
+  "nav_projects": "المشاريع",
+  "nav_about": "من نحن",
+  "nav_contact": "تواصل معنا",
+
+  "hero_title": "نحن نبني مستقبل السكن الفاخر",
+  "hero_desc": "مشاريع راقية في مواقع متميزة — جودة ورفاهية وقيمة استثمارية عالية.",
+
+  "btn_projects": "مشاهدة المشاريع",
+  "btn_contact": "تواصل معنا",
+
+  "projects_title": "المشاريع",
+
+  "about_title": "من نحن",
+  
+  "about_intro_title": "تقديم الوكالة",
+  "about_intro_text": "تُعد وكالة Palma Immobilier إحدى الوكالات العقارية المتميزة التي تقدم خدمات متكاملة في مجال العقار بكل احترافية وجودة.",
+
+  "about_history_title": "تاريخ الوكالة",
+  "about_history_text": "تأسست الوكالة منذ عدة سنوات، واستطاعت أن تثبت مكانتها في السوق العقاري بفضل خبرتها وتنوع خدماتها في ولايتي الجزائر ووهران، مما جعلها وجهة موثوقة لدى العديد من العملاء.",
+
+  "about_vision_title": "رؤية الوكالة",
+  "about_vision_text": "تسعى وكالة Palma Immobilier إلى تحقيق أعلى مستويات رضا العملاء من خلال تقديم استشارات مهنية وخدمات عقارية عالية الجودة تلبي احتياجاتهم بدقة وشفافية.",
+
+  "about_team_title": "فريق العمل",
+  "about_team_text": "يضم فريق الوكالة مجموعة من الخبراء ذوي خبرة واسعة في الأسواق العقارية المحلية والدولية، مما يشكل دعماً قوياً للعملاء ويوفر حلولاً احترافية مناسبة.",
+
+  
+  "contact_title": "تواصل معنا",
+  "contact_submit": "إرسال",
+  
+  "contact_name": "الاسم",
+  "contact_email": "البريد الإلكتروني",
+  "contact_phone": "رقم الهاتف",
+  "contact_message": "رسالتك",
+  
+  "project_gold_title": "PALMA Résidence",
+  "project_gold_short_desc": "مجمع فاخر بمرافق عصرية، تصميم عصري ومساحات متنوعة تناسب جميع الاحتياجات.",
+  "project_gold_desc_title": "وصف المشروع",
+  "project_gold_desc_text": "تفاصيل مطولة عن المشروع: الموقع، المرافق، خطط الدفع، المواعيد والتسليم.",
+  "project_gold_location_title": "الموقع",
+  "project_back_to_projects": "← رجوع للمشاريع",
+  
+  "project_title": "PALMA Résidence",
+  "project_desc": "مجمع فاخر بمرافق عصرية، تصميم عصري ومساحات متنوعة تناسب جميع الاحتياجات.",
+  
+  "project_details_title": "وصف المشروع",
+  "project_details_text": "تفاصيل مطولة عن المشروع: الموقع، المرافق، خطط الدفع، المواعيد والتسليم.",
+  "project_location": "الموقع: Bir El Djir – Oran, على شارع Boulevard Bou Chikhie",
+  "project_delivery": "التسليم: 2026",
+  "project_area": "المساحات: شقق 70–180 م²، فلل 250–400 م²",
+  "project_map_title": "الموقع"
+
+
+
+}
