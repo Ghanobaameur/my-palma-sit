@@ -1,27 +1,223 @@
+/* ===========================
+   VARIABLES
+=========================== */
 :root{
-  --gold: #BFA36A;
-  --darkgold: #9A7B3A;
-  --white: #ffffff;
-  --lightgray: #F5F5F5;
-  --darktext: #222222;
+  --gold:#BFA36A;
+  --dark:#111;
+  --white:#fff;
 }
 
-html,body{font-family: 'Cairo', sans-serif; background:var(--white); color:var(--darktext);}
+body{
+  font-family:'Cairo',sans-serif;
+  scroll-behavior:smooth;
+  background:#fff;
+  color:#222;
+}
 
-/* Buttons */
-.btn-cta{padding:0.6rem 1rem;border-radius:9999px;background:var(--gold);color:#fff;font-weight:600;box-shadow:0 6px 18px rgba(0,0,0,0.08);}
+/* ===========================
+   NAVBAR
+=========================== */
+header{
+  z-index:9999 !important;
+}
+#nav {
+    background: rgba(92, 91, 91, 0.35); /* أسود شفاف مائل للدارك */
+    backdrop-filter: blur(1px);
+    transition: .3s;
+}
 
-/* Project hover */
-.project-card img{transition:transform .5s ease, filter .4s ease;}
-.project-card:hover img{transform:scale(1.03);filter:brightness(0.98);}
 
-/* Reveal animations */
-.reveal{opacity:0;transform:translateY(20px);transition:all .8s cubic-bezier(.2,.9,.3,1);}
-.reveal.active{opacity:1;transform:none;}
 
-/* Mobile menu */
-#mobile-menu a{border-top:1px solid #eee;display:block;padding:0.6rem 0}
+#nav.scrolled{
+  background:#fff;
+  box-shadow:0 3px 15px rgba(0,0,0,.1);
+}
 
-/* Small utilities */
-img{display:block;max-width:100%;}
-a{transition:color .2s ease;}
+#nav nav a{
+  color:white;
+}
+
+#nav.scrolled nav a{
+  color:black;
+}
+
+#nav-toggle{ color:white; transition:.3s; }
+#nav.scrolled #nav-toggle{ color:black; }
+
+/* زر اللغة */
+.lang-switch {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 6px 14px;
+    border-radius: 20px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+}
+
+#nav.scrolled .lang-switch {
+    background: rgba(255,255,255,0.8);
+    color: black;
+    border-color: rgba(0,0,0,0.2);
+}
+
+/* ===========================
+   LANGUAGE MENU
+=========================== */
+.lang-menu {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background: white;
+    border-radius: 10px;
+    padding: 6px 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    width: 150px;
+    z-index: 99999;
+}
+
+.lang-option {
+    width: 100%;
+    padding: 8px 15px;
+    text-align: left;
+    background: white;
+    border: none;
+    cursor: pointer;
+}
+
+.lang-option:hover {
+    background: #f5f5f5;
+}
+
+/* ===========================
+   SLIDER (FIXED - NO BLACK FLASH)
+=========================== */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 540px;
+  overflow: hidden;
+  background: #000;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* PHONE VERSION */
+@media (max-width: 768px) {
+  .slider{
+    height:auto;
+    aspect-ratio:960/540;
+  }
+  .slide{
+    background-size:contain !important;
+  }
+}
+
+/* ===========================
+   HERO TEXT RTL/LTR FIX
+=========================== */
+.hero-text-holder{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    z-index:20;
+}
+
+html[dir="rtl"] .hero-text-holder{
+  direction:rtl;
+  text-align:right;
+}
+
+html[dir="ltr"] .hero-text-holder{
+  direction:ltr;
+  text-align:left;
+}
+
+/* ===========================
+   HERO TEXT — MOBILE FIX
+   =========================== */
+@media (max-width: 640px) {
+
+  .hero-text-holder .textbox h1 {
+    font-size: 1.3rem;     /* كان 4xl → كبير جداً على الهاتف */
+    line-height: 1.3;
+  }
+
+  .hero-text-holder .textbox p {
+    font-size: 0.78rem;
+  }
+
+  .hero-text-holder .textbox a {
+    padding: 0.25rem 0.75rem;   /* تقليل حجم الأزرار */
+    font-size: 0.78rem;
+  }
+
+  .hero-text-holder {
+    padding: 10px;
+  }
+
+  .hero-text-holder .flex {
+    gap: 0.5rem;            /* تقليل المسافة بين الأزرار */
+  }
+}
+
+/* ===========================
+   REVEAL
+=========================== */
+.reveal{
+  opacity:0;
+  transform:translateY(20px);
+  transition:.8s;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:none;
+}
+
+section { scroll-margin-top: 120px; }
+@media(max-width:768px){ section{ scroll-margin-top: 140px; } }
+
+/* ===========================
+   PROJECT PAGES RTL/LTR FIX
+=========================== */
+html[dir="ltr"] .project-page{
+  text-align:left !important;
+}
+html[dir="rtl"] .project-page{
+  text-align:right !important;
+}
+
+html[dir="ltr"] .project-page *{
+  direction:ltr;
+}
+html[dir="rtl"] .project-page *{
+  direction:rtl;
+}
+
+
+
+
