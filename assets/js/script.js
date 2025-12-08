@@ -1,28 +1,57 @@
-// Mobile nav toggle (main)
-document.getElementById('nav-toggle')?.addEventListener('click', ()=>{
-  const m = document.getElementById('mobile-menu'); if(!m) return; m.classList.toggle('hidden');
+// ===========================
+// MOBILE MENU TOGGLE
+// ===========================
+const navToggle = document.getElementById("nav-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+
+if (navToggle && mobileMenu) {
+    navToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+    });
+}
+
+// إخفاء القائمة عند الضغط على عنصر
+document.querySelectorAll("#mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+    });
 });
 
-// Reveal on scroll (IntersectionObserver)
-const obs = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.classList.add('active');
-      obs.unobserve(e.target);
+
+// ===========================
+// REVEAL ON SCROLL
+// ===========================
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.15 });
+
+document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+
+
+// ===========================
+// SMOOTH SCROLL
+// ===========================
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener("click", e => {
+        const target = document.querySelector(a.getAttribute("href"));
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth" });
+        }
+    });
+});
+
+
+// ===========================
+// OPTIONAL: Close menu on scroll
+// ===========================
+window.addEventListener("scroll", () => {
+    if (!mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.add("hidden");
     }
-  });
-},{threshold:0.15});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-
-// Smooth scroll for internal anchors
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click', e=>{
-    const href = a.getAttribute('href');
-    if(!href || href === '#') return;
-    const el = document.querySelector(href);
-    if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
-  });
 });
-
-// Lazy loading note: images use loading="lazy" attribute in templates.
-// You can add further lazy-loading polyfills if targetting old browsers.

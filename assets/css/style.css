@@ -1,102 +1,127 @@
 /* ===========================
    VARIABLES
 =========================== */
-:root{
-  --gold:#BFA36A;
-  --dark:#111;
-  --white:#fff;
+:root {
+  --gold: #BFA36A;
+  --dark: #111;
+  --white: #fff;
 }
 
-body{
-  font-family:'Cairo',sans-serif;
-  scroll-behavior:smooth;
-  background:#fff;
-  color:#222;
+body {
+  font-family: 'Cairo', sans-serif;
+  scroll-behavior: smooth;
+  background: #fff;
+  color: #222;
 }
 
 /* ===========================
    NAVBAR
 =========================== */
-header{
-  z-index:9999 !important;
+header {
+  z-index: 9999 !important;
 }
+
 #nav {
-    background: rgba(92, 91, 91, 0.35); /* أسود شفاف مائل للدارك */
-    backdrop-filter: blur(1px);
-    transition: .3s;
+  background: rgba(92, 91, 91, 0.35);
+  backdrop-filter: blur(3px);
+  transition: .3s;
 }
 
-
-
-#nav.scrolled{
-  background:#fff;
-  box-shadow:0 3px 15px rgba(0,0,0,.1);
+#nav.scrolled {
+  background: #fff;
+  box-shadow: 0 3px 15px rgba(0,0,0,.1);
 }
 
-#nav nav a{
-  color:white;
+#nav nav a {
+  color: white;
+  transition: .3s;
 }
 
-#nav.scrolled nav a{
-  color:black;
+#nav.scrolled nav a {
+  color: black;
 }
 
-#nav-toggle{ color:white; transition:.3s; }
-#nav.scrolled #nav-toggle{ color:black; }
+#nav-toggle {
+  color: white;
+  transition: .3s;
+}
 
-/* زر اللغة */
+#nav.scrolled #nav-toggle {
+  color: black;
+}
+
+/* زر اللغة (Desktop) */
 .lang-switch {
-    background: rgba(255,255,255,0.2);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255,255,255,0.4);
-    padding: 6px 14px;
-    border-radius: 20px;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    transition: .3s;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 14px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
 }
 
 #nav.scrolled .lang-switch {
-    background: rgba(255,255,255,0.8);
-    color: black;
-    border-color: rgba(0,0,0,0.2);
+  background: rgba(255,255,255,0.85);
+  color: black;
+  border-color: rgba(0,0,0,0.2);
+}
+
+/* زر اللغة للهاتف */
+#mobile-lang {
+  background: rgba(255,255,255,0.25);
+  border: 1px solid white;
+  color: white;
+  backdrop-filter: blur(4px);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+#nav.scrolled #mobile-lang {
+  background: rgba(0,0,0,0.05);
+  color: black;
+  border-color: black;
 }
 
 /* ===========================
-   LANGUAGE MENU
+   LANGUAGE MENU (DESKTOP)
 =========================== */
 .lang-menu {
-    position: absolute;
-    top: 45px;
-    right: 0;
-    background: white;
-    border-radius: 10px;
-    padding: 6px 0;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-    width: 150px;
-    z-index: 99999;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: white;
+  border-radius: 10px;
+  padding: 6px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  width: 150px;
+  z-index: 99999;
 }
 
 .lang-option {
-    width: 100%;
-    padding: 8px 15px;
-    text-align: left;
-    background: white;
-    border: none;
-    cursor: pointer;
+  width: 100%;
+  padding: 8px 15px;
+  text-align: left;
+  background: white;
+  border: none;
+  cursor: pointer;
 }
 
 .lang-option:hover {
-    background: #f5f5f5;
+  background: #f5f5f5;
 }
 
 /* ===========================
-   SLIDER (FIXED - NO BLACK FLASH)
+   SLIDER (No Black Flash)
 =========================== */
 .slider {
   position: relative;
@@ -122,47 +147,46 @@ header{
   z-index: 2;
 }
 
-/* PHONE VERSION */
+/* MOBILE SLIDER */
 @media (max-width: 768px) {
-  .slider{
-    height:auto;
-    aspect-ratio:960/540;
+  .slider {
+    height: auto;
+    aspect-ratio: 960/540;
+    margin-top: 70px; /* ثابت تحت الهيدر */
   }
-  .slide{
-    background-size:contain !important;
+
+  .slide {
+    background-size: contain !important;
   }
 }
 
 /* ===========================
    HERO TEXT RTL/LTR FIX
 =========================== */
-.hero-text-holder{
-    position:absolute;
-    inset:0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-    z-index:20;
+.hero-text-holder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 20;
 }
 
-html[dir="rtl"] .hero-text-holder{
-  direction:rtl;
-  text-align:right;
+html[dir="rtl"] .hero-text-holder {
+  direction: rtl;
+  text-align: right;
 }
 
-html[dir="ltr"] .hero-text-holder{
-  direction:ltr;
-  text-align:left;
+html[dir="ltr"] .hero-text-holder {
+  direction: ltr;
+  text-align: left;
 }
 
-/* ===========================
-   HERO TEXT — MOBILE FIX
-   =========================== */
+/* MOBILE TEXT FIX */
 @media (max-width: 640px) {
-
   .hero-text-holder .textbox h1 {
-    font-size: 1.3rem;     /* كان 4xl → كبير جداً على الهاتف */
+    font-size: 1.3rem;
     line-height: 1.3;
   }
 
@@ -171,53 +195,54 @@ html[dir="ltr"] .hero-text-holder{
   }
 
   .hero-text-holder .textbox a {
-    padding: 0.25rem 0.75rem;   /* تقليل حجم الأزرار */
+    padding: 0.25rem 0.75rem;
     font-size: 0.78rem;
   }
 
-  .hero-text-holder {
-    padding: 10px;
-  }
-
   .hero-text-holder .flex {
-    gap: 0.5rem;            /* تقليل المسافة بين الأزرار */
+    gap: 0.5rem;
   }
 }
 
 /* ===========================
-   REVEAL
+   REVEAL ANIMATION
 =========================== */
-.reveal{
-  opacity:0;
-  transform:translateY(20px);
-  transition:.8s;
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: .8s;
 }
 
-.reveal.active{
-  opacity:1;
-  transform:none;
+.reveal.active {
+  opacity: 1;
+  transform: none;
 }
 
-section { scroll-margin-top: 120px; }
-@media(max-width:768px){ section{ scroll-margin-top: 140px; } }
+section {
+  scroll-margin-top: 120px;
+}
+
+@media(max-width:768px) {
+  section {
+    scroll-margin-top: 140px;
+  }
+}
 
 /* ===========================
    PROJECT PAGES RTL/LTR FIX
 =========================== */
-html[dir="ltr"] .project-page{
-  text-align:left !important;
-}
-html[dir="rtl"] .project-page{
-  text-align:right !important;
+html[dir="ltr"] .project-page {
+  text-align: left !important;
 }
 
-html[dir="ltr"] .project-page *{
-  direction:ltr;
-}
-html[dir="rtl"] .project-page *{
-  direction:rtl;
+html[dir="rtl"] .project-page {
+  text-align: right !important;
 }
 
+html[dir="ltr"] .project-page * {
+  direction: ltr;
+}
 
-
-
+html[dir="rtl"] .project-page * {
+  direction: rtl;
+}
