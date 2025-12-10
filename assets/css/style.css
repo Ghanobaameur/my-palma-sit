@@ -152,7 +152,7 @@ header {
   .slider {
     height: auto;
     aspect-ratio: 960/540;
-    margin-top: 70px; /* ثابت تحت الهيدر */
+    margin-top: 75px; /* ثابت تحت الهيدر */
   }
 
   .slide {
@@ -245,4 +245,24 @@ html[dir="ltr"] .project-page * {
 
 html[dir="rtl"] .project-page * {
   direction: rtl;
+}
+
+
+/* زر اللغة (Desktop) في صفحة المشروع */
+body.project-page #lang-toggle {
+  background: rgba(0,0,0,0.1) !important;
+  color: black !important;
+  border-color: rgba(0,0,0,0.3) !important;
+}
+
+/* قائمة اختيار اللغة */
+body.project-page .lang-menu {
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* زر اللغة (Mobile) في صفحة المشروع */
+body.project-page #mobile-lang {
+  background: rgba(0,0,0,0.1) !important;
+  color: black !important;
+  border-color: rgba(0,0,0,0.4) !important;
 }
