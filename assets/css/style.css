@@ -150,15 +150,15 @@ header {
 /* MOBILE SLIDER */
 @media (max-width: 768px) {
   .slider {
-    height: auto;
-    aspect-ratio: 960/540;
-    margin-top: 75px; /* ثابت تحت الهيدر */
+    height: 300px;   /* ارتفاع ثابت للهاتف */
+    margin-top: 80px;
   }
 
   .slide {
-    background-size: contain !important;
+    background-size: cover !important; /* الأفضل استخدام cover */
   }
 }
+
 
 /* ===========================
    HERO TEXT RTL/LTR FIX
