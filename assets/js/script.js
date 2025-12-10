@@ -55,3 +55,21 @@ window.addEventListener("scroll", () => {
         mobileMenu.classList.add("hidden");
     }
 });
+
+// ===========================
+// SLIDER AUTO SWITCH
+// ===========================
+const slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
+
+function changeSlide() {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[currentSlide].classList.add("active");
+
+    currentSlide = (currentSlide + 1) % slides.length;
+}
+
+if (slides.length > 0) {
+    changeSlide(); // أول صورة تظهر
+    setInterval(changeSlide, 4000); // كل 4 ثواني
+}
